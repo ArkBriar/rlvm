@@ -5,6 +5,7 @@
 *.mshark
 *.o
 *~
+buildbak
 .gdb_history
 /build-stamp
 /configure-stamp

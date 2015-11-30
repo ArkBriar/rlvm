@@ -544,12 +544,15 @@ bool TextWindow::DisplayCharacter(const std::string& current,
 
     // If the width of this glyph plus the spacing will put us over the
     // edge of the window, then line increment.
-    if (MustLineBreak(cur_codepoint, rest)) {
-      HardBrake();
-
-      if (IsFull())
-        return false;
-    }
+    // There are some problem's with this function MustLineBreak
+/*
+ *    if (MustLineBreak(cur_codepoint, rest)) {
+ *      HardBrake();
+ *
+ *      if (IsFull())
+ *        return false;
+ *    }
+ */
 
     RGBColour shadow = RGBAColour::Black().rgb();
     text_system_.RenderGlyphOnto(current,
